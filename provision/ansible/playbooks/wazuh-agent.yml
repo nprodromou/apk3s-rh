@@ -1,0 +1,18 @@
+---
+- hosts: all
+  become: true
+  become_user: nprodromou
+  gather_facts: true
+  any_errors_fatal: true
+  roles:
+    - ../inventory/group_vars/wazuh/ansible-wazuh-agent
+  vars:
+    wazuh_managers:
+      - address: siem.prodromou.com
+        port: 1514
+        protocol: tcp
+        api_port: 55000
+        api_proto: 'http'
+        api_user: ansible
+        max_retries: 5
+        retry_interval: 5
