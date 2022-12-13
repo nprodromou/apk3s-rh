@@ -18,7 +18,10 @@ resources:
   - ./hajimari.yaml
   - ./ingress-nginx.yaml
   - ./jetstack.yaml
+  - ./k8s-gateway-charts.yaml
+  - ./kubereboot-charts.yaml
   - ./kyverno.yaml
+  - ./metallb-charts.yaml
   - ./metrics-server.yaml
   - ./node-feature-discovery.yaml
   - ./piraeus.yaml
