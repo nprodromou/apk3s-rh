@@ -4,4 +4,6 @@ kind: Kustomization
 resources:
   - ./default
   - ./kube-system
+  - ./rook-ceph
   # - ./system-upgrade
+
