@@ -4,7 +4,7 @@
     - worker
   become: true
   gather_facts: true
-  any_errors_fatal: true
+  any_errors_fatal: false
   tasks:
     - name: Delete /var/lib/rook
       ansible.builtin.file:
@@ -31,6 +31,7 @@
   any_errors_fatal: true
   vars:
     disk: "/dev/sda"
+    disk2: "/dev/disk/by-id/usb-AMicro*"
   pre_tasks:
     - name: Pausing for 5 seconds...
       pause:
@@ -38,6 +39,10 @@
   tasks:
     - name: Zap All Instances of "{{ disk }}"
       command: 'sgdisk --zap-all "{{ disk }}"'
+      ignore_errors: true
+
+    - name: Zap All Instances of "{{ disk2 }}"
+      command: 'sgdisk --zap-all "{{ disk2 }}"'
       ignore_errors: true
 
     - name: Clean hdds with dd
@@ -48,6 +53,7 @@
       snap:
         name: lxd
         state: absent
+      ignore_errors: true
 
     # - name: Clean disks such as ssd with blkdiscard instead of dd
     #   command: 'blkdiscard "{{ disk }}"'
