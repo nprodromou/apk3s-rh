@@ -65,40 +65,40 @@ spec:
         nodes:
           - name: "aprp01"
             devices:
-            - name: "/dev/disk/by-id/usb-AMicro_AM8180_NVME_012345679717"
+            - name: "/dev/sda"
           - name: "aprp02"
             devices:
-            - name: "/dev/disk/by-id/usb-AMicro_AM8180_NVME_012345680437"
+            - name: "/dev/sda"
           - name: "aprp03"
             devices:
-            - name: "/dev/disk/by-id/usb-AMicro_AM8180_NVME_012345679807"
+            - name: "/dev/sda"
           - name: "aprp04"
             devices:
-            - name: "/dev/disk/by-id/usb-AMicro_AM8180_NVME_012345680246"
+            - name: "/dev/sda"
           - name: "aprp05"
             devices:
-            - name: "/dev/disk/by-id/usb-AMicro_AM8180_NVME_012345679649"
+            - name: "/dev/sda"
           - name: "aprp06"
             devices:
-            - name: "/dev/disk/by-id/usb-AMicro_AM8180_NVME_012345680617"
+            - name: "/dev/sda"
           - name: "aprp07"
             devices:
-            - name: "/dev/disk/by-id/usb-AMicro_AM8180_NVME_012345679691"
+            - name: "/dev/sda"
           - name: "aprp08"
             devices:
-            - name: "/dev/disk/by-id/usb-AMicro_AM8180_NVME_012345681051"
+            - name: "/dev/sda"
           - name: "aprp09"
             devices:
-            - name: "/dev/disk/by-id/usb-AMicro_AM8180_NVME_012345679540"
+            - name: "/dev/sda"
           - name: "aprp10"
             devices:
-            - name: "/dev/disk/by-id/usb-AMicro_AM8180_NVME_012345680911"
+            - name: "/dev/sda"
           - name: "aprp11"
             devices:
-            - name: "/dev/disk/by-id/usb-AMicro_AM8180_NVME_012345679632"
+            - name: "/dev/sda"
           - name: "aprp12"
             devices:
-            - name: "/dev/disk/by-id/usb-AMicro_AM8180_NVME_012345680028"
+            - name: "/dev/sda"
     cephBlockPools:
       - name: ceph-blockpool
         spec:
